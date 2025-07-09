@@ -503,3 +503,183 @@
 }
 
 /* End Footer */
+/* ========================================= */
+/* MEDIA QUERIES                */
+/* ========================================= */
+
+/* For Smaller Desktops & Large Tablets (Max-width: 1200px) */
+@media (max-width: 1200px) {
+    .header .inner-menu ul li {
+        margin-left: 40px; /* Reduce menu spacing */
+    }
+
+    .section-4 .inner-iphone {
+        left: 100px; /* Adjust iPhone position */
+    }
+}
+
+
+/* For Tablets (Portrait) (Max-width: 991px) */
+@media (max-width: 991px) {
+    .header .inner-main {
+        padding: 15px;
+        border-radius: 0;
+    }
+    .header {
+        top: 0; /* Header sticks to the top */
+        opacity: 1;
+    }
+
+    .header .inner-menu ul {
+        /* On tablets, a hamburger menu would be ideal. For now, we'll hide the text menu. */
+        display: none;
+    }
+
+    .section-1 h1 {
+        font-size: 2.5rem; /* Reduce heading font size */
+    }
+    
+    .section-2 .box-head h2,
+    .section-4 .box-head h2,
+    .section-5 .box-head h2,
+    .section-test .box-head h2,
+    .section-pricing .box-head h2 {
+        font-size: 1.8rem; /* Reduce section title font size */
+    }
+
+    .section-2 .inner-head {
+        font-size: 1.1rem; /* Reduce subtitle font size */
+    }
+
+    /* Adjust the "How it works" section for tablets */
+    .section-4 .inner-iphone {
+        position: relative;
+        left: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .section-4 .inner-iphone img {
+        width: 200px;
+        height: auto;
+    }
+    
+    .section-4 .col-6 {
+        flex: 0 0 100%; /* Make columns full width */
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .section-4 .inner-box .inner-step-box {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-4 .inner-box .inner-download {
+        justify-content: center;
+    }
+}
+
+
+/* For Mobile Phones (Max-width: 767px) */
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+
+    .header .inner-logo img {
+        height: 60px; /* Smaller logo */
+    }
+
+    .section-1 h1 {
+        font-size: 1.8rem; /* Further reduce heading font size */
+        line-height: 1.4;
+    }
+    
+    .section-1 .inner-wrap {
+        text-align: center;
+    }
+
+    /* Stack buttons on mobile */
+    .section-1 .button {
+        display: block;
+        margin: 15px auto;
+    }
+
+    .section-1 .button-one,
+    .section-1 .button-two {
+        margin-right: 0;
+    }
+
+    .section-2,
+    .section-3,
+    .section-4,
+    .section-5 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .section-2 .box-head {
+        margin-bottom: 30px;
+    }
+    
+    .section-2 .inner-box {
+        text-align: center; /* Center content in feature boxes */
+    }
+
+    .section-2 .inner-content h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Full-width sections for testimonials and pricing */
+    .section-test, .section-pricing {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .section-4 .box-head {
+        margin-bottom: 40px;
+    }
+
+    .section-4 .inner-box .inner-step-box div {
+        height: 45px;
+        width: 45px;
+        font-size: 120%;
+    }
+    
+    .section-4 .inner-box .inner-download {
+        flex-direction: column; /* Stack download buttons */
+        align-items: center;
+    }
+
+    .section-4 .inner-box .inner-download img {
+        width: 200px;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .section-4 .inner-box .inner-download .appstore {
+         width: 240px;
+    }
+
+    .section-test blockquote {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .section-test blockquote::before {
+        font-size: 400%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-test .user {
+        justify-content: center;
+    }
+    
+    .footer h3 {
+        font-size: 1rem;
+    }
+}
