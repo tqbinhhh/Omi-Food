@@ -1,0 +1,505 @@
+/* Header */
+.header {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.header .inner-main {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-radius: 45px;
+    background: #fff;
+    opacity: 0.8;
+    filter: alpha(opacity=50);
+}
+
+.header .inner-logo {
+    margin-right: 20px;
+}
+
+.header .inner-logo img {
+    height: 73px;
+    width: auto;
+}
+
+.header .inner-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header .inner-menu ul li {
+    margin-left: 80px;
+}
+
+.header .inner-menu ul li a {
+    color: var(--color-);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.header .inner-menu ul li a:hover {
+    color: orange;
+}
+
+/* End Header */
+
+/* Section-1 */
+.section-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.section-1 h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.section-1 a {
+    text-decoration: none;
+    color: black;
+}
+
+.section-1 .button-one {
+    margin-top: 20px;
+    margin-right: 20px;
+    background: orange;
+    border: 1px solid #e67e27;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.section-1 .button-one:hover {
+    background: rgb(255, 149, 0);
+}
+
+.section-1 .button-two {
+    background-color: rgba(230, 126, 39, 0.1);
+    border: 1px solid #e67e27;
+    color: orange;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.section-1 .button-two:hover {
+    background: orange;
+    color: #fff;
+}
+
+/* End Section-1 */
+
+/* Section-2 */
+.section-2 {
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.section-2 .box-head {
+    margin-bottom: 65px;
+}
+
+.section-2 .box-head h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.section-2 .inner-head {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.section-2 .inner-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.section-2 .inner-icon i {
+    font-size: 40px;
+    color: #e67e27;
+}
+
+.section-2 .inner-content h3 {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.section-2 .inner-desc {
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* End Section-2 */
+
+/* Section-3 */
+
+.section-3 {
+    margin-bottom: 100px;
+    padding: 0;
+}
+
+.section-3 .row {
+    margin: 0 !important;
+}
+
+.section-3 .col-3 {
+    padding: 0 !important;
+}
+
+.section-3 .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.section-3 .inner-image {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    /* Đảm bảo hình vuông, bạn có thể chỉnh tùy ý */
+    overflow: hidden;
+}
+
+.section-3 .inner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: all 0.5s ease;
+    display: block;
+    /* loại bỏ khoảng trắng dưới ảnh */
+}
+
+.section-3 .inner-image img:hover {
+    opacity: 1;
+    transform: scale(1.15);
+    transition: transform 0.5s;
+}
+
+/* End Section-3 */
+
+/* Section-4 */
+.section-4 {
+    margin-bottom: 100px;
+}
+
+.section-4 .box-head {
+    margin-bottom: 100px;
+}
+
+.section-4 .box-head h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.section-4 .inner-iphone {
+    position: absolute;
+    left: 225px;
+}
+
+.section-4 .inner-iphone img {
+    width: 250px;
+    height: 500px;
+}
+
+.section-4 .inner-box .inner-step-box {
+    padding-top: 50px;
+}
+
+.section-4 .inner-box .inner-step-box div {
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.section-4 .inner-box .inner-desc {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.section-4 .inner-box .inner-download {
+    margin-top: 75px;
+    display: flex;
+}
+
+.section-4 .inner-box .inner-download img {
+    display: flex;
+    width: 250px;
+    padding-left: 20px;
+    margin-bottom: 50px;
+}
+
+.section-4 .inner-box .inner-download .appstore {
+    width: 295px;
+}
+
+/* End Section-4 */
+
+/* Section-5 */
+.section-5 {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Căn đều các phần tử */
+}
+
+.section-5 .col-12 {
+    height: 100px;
+}
+
+.section-5 .box-head h2 {
+    font-weight: 200;
+}
+
+.section-5 .col-3 {
+    padding-left: 25px;
+    /* Điều chỉnh để khoảng cách đồng đều */
+    padding-right: 25px;
+}
+
+.section-5 .inner-box {
+    object-fit: cover;
+}
+
+.section-5 .inner-box img {
+    width: 100%;
+    /* Đảm bảo hình ảnh lấp đầy khung */
+    height: auto;
+    border: solid 2px orange;
+}
+
+.section-5 .inner-box h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+}
+
+.section-5 .inner-box .inner-icon {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-5 .inner-box .inner-desc {
+    display: inline;
+    padding-left: 20px;
+}
+
+.section-5 .inner-box a {
+    padding-left: 20px;
+    color: #e67e22;
+}
+
+.section-5 .inner-box a:hover {
+    color: #e85216;
+}
+
+/* End Section-5 */
+
+/* Section-test */
+.section-test {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/back-customers-min.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.section-test .box-head h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    /* Khoảng cách từ tiêu đề đến gạch ngang */
+}
+
+
+.section-test blockquote {
+    padding: 2px;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+.section-test blockquote::before {
+    content: "\201C";
+    /* Ký tự dấu nháy kép trái */
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -10px;
+}
+
+.section-test .user {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.section-test .user img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.section-test .user p {
+    margin: 0;
+    font-size: 90%;
+}
+
+/* End Section-Test */
+
+/* Section-Pricing */
+.section-pricing {
+    padding: 80px 0;
+    background-color: #f4f4f4;
+    /* Nền xám nhạt cho cả section */
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.pricing-box {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+}
+
+.pricing-box .inner-head h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.pricing-box .price {
+    font-size: 300%;
+    font-weight: 100;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.pricing-box .price span {
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.pricing-box .price-meal {
+    font-size: 80%;
+    margin-bottom: 20px;
+}
+
+.pricing-box .inner-list {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.pricing-box .inner-list ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.pricing-box .inner-list ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing-box .inner-list ul li:last-child {
+    border-bottom: none;
+}
+
+.pricing-box .inner-list ul li i {
+    color: #e67e22;
+    margin-right: 10px;
+    width: 15px;
+    /* Giúp các dòng chữ thẳng hàng */
+}
+
+.pricing-box .inner-button {
+    /* margin-top: 20px; */
+    background: #e67e22;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+}
+
+.pricing-box .inner-button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.pricing-box .inner-button:hover {
+    background: #e85216;
+}
+
+/* End Section-Price */
+
+/* Footer */
+.footer {
+    text-align: center;
+    justify-content: center;
+    height: 10px;
+}
+
+.footer h3 {
+    padding-top: 40px;
+    color: #e67e27;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* End Footer */
