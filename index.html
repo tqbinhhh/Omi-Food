@@ -1,524 +1,383 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>OmiFood</title>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slcik/slick/slick-theme.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <title>Trần Quốc Bình - Frontend Developer</title>
+
+    <meta name="description"
+        content="Portfolio cá nhân của Trần Quốc Bình, một lập trình viên Frontend đầy đam mê với kinh nghiệm về React, Node.js và thiết kế UI/UX.">
+    <meta name="keywords"
+        content="Trần Quốc Bình, Frontend Developer, Portfolio, Web Developer, React, JavaScript, UI/UX Design">
+    <meta name="author" content="Trần Quốc Bình">
+
+    <link rel="icon"
+        href="https://res.cloudinary.com/dvzingci9/image/upload/v1653014724/My-portfolio/logo1_optimized_zwbt6t.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <div class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="inner-main">
-                        <div class="inner-logo">
-                            <a href="#">
-                                <img src="./assets/images/logo.png" alt="OmiFood Logo">
-                            </a>
+    <div id="tsparticles"></div>
+
+    <header class="header">
+        <nav class="container">
+            <a href="#home" class="logo">Binh.dev</a>
+            <ul class="nav-links">
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#projects">Dự án</a></li>
+                <li><a href="#experience">Kinh nghiệm</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn">
+                    <i class="fa-solid fa-sun"></i>
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="menu-toggle" class="menu-toggle-btn">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home" id="home">
+            <div class="container home-content">
+                <div class="intro-text">
+                    <h1 class="main-title">Trần Quốc Bình</h1>
+                    <p>Frontend Developer đam mê xây dựng những trải nghiệm web hiện đại và cuốn hút.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/tqbinhhh" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/tran.quoc.binh.29521" target="_blank" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <a href="#projects" class="btn btn-primary">Xem dự án của tôi</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <div class="row align-items-center reveal">
+                    <div class="col-lg-5 text-center">
+                        <div class="about-image-wrapper">
+                            <div class="about-image-glow"></div>
+                            <img src="./512817099_1419039486107375_5687404534160210559_n.jpg" alt="Trần Quốc Bình"
+                                class="about-img">
                         </div>
-                        <div class="inner-menu">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        FOOD DELIVERY
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        HOW IT WORKS
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        OUR CITIES
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        SIGN UP
-                                    </a>
-                                </li>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="section-title">
+                            <span>Giới thiệu</span>
+                            <h2>Một chút về tôi</h2>
+                        </div>
+                        <p class="about-description">
+                            Xin Chào, mình là Quốc Bình! Hiện là học sinh cấp 3 với niềm đam mê
+                            dành cho Kỹ thuật phần mềm. Với kinh nghiệm đã học được và đúc kết trong những khoá học và
+                            thực chiến trong lĩnh vực Frontend và
+                            Desgin Website, mình luôn tìm kiếm cơ hội để biến những ý tưởng sáng tạo thành các sản phẩm
+                            số mượt mà và hiệu quả. Hiện tại, mình đang nỗ lực mở rộng kiến thức sang mảng Backend để
+                            trở
+                            thành một lập trình viên toàn diện.
+                        </p>
+                        <ul class="info-list">
+                            <li><i class="fa-solid fa-cake-candles"></i> <strong>Tuổi:</strong> 17</li>
+                            <li><i class="fa-solid fa-school"></i> <strong>Trường:</strong> THPT FPT</li>
+                            <li><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> tqbdinamo@gmail.com
+                            </li>
+                            <li><i class="fa-solid fa-location-dot"></i> <strong>Nơi ở:</strong> Đà Nẵng</li>
+                        </ul>
+                        <div class="about-buttons">
+                            <a href="./CV" target="_blank" class="btn btn-secondary">Tải CV của tôi</a>
+                            <a href="#contact" class="btn btn-outline">Liên hệ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <div class="container">
+                <div class="section-title text-center reveal">
+                    <span>Năng lực</span>
+                    <h2>Toolkit & Thành Tích</h2>
+                </div>
+                <div class="skills-grid" data-stagger-children>
+                    <div class="skill-card reveal">
+                        <h3 class="skill-card-title">Ngôn ngữ Lập trình</h3>
+                        <div class="skill-icons">
+                            <div class="skill-icon" data-tooltip="HTML5"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                    alt="HTML5"></div>
+                            <div class="skill-icon" data-tooltip="CSS3"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                    alt="CSS3"></div>
+                            <div class="skill-icon" data-tooltip="JavaScript"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                    alt="JavaScript"></div>
+                            <div class="skill-icon" data-tooltip="Swift"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg"
+                                    alt="Swift"></div>
+                            <div class="skill-icon" data-tooltip="Java"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                    alt="Java"></div>
+                            <div class="skill-icon" data-tooltip="Python"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                    alt="Python"></div>
+                            <div class="skill-icon" data-tooltip="C++"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                                    alt="C++"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card reveal">
+                        <h3 class="skill-card-title">Công nghệ & Công cụ</h3>
+                        <div class="skill-icons">
+                            <div class="skill-icon" data-tooltip="Flutter"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                                    alt="Flutter"></div>
+                            <div class="skill-icon" data-tooltip="React"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                    alt="React"></div>
+                            <div class="skill-icon" data-tooltip="Node.js"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                    alt="NodeJS"></div>
+                            <div class="skill-icon" data-tooltip="Bootstrap"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                    alt="Bootstrap"></div>
+                            <div class="skill-icon" data-tooltip="MySQL"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                    alt="MySQL"></div>
+                            <div class="skill-icon" data-tooltip="Git"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                    alt="Git"></div>
+                            <div class="skill-icon" data-tooltip="GitHub"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                    alt="GitHub"></div>
+                            <div class="skill-icon" data-tooltip="VS Code"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                                    alt="VS Code"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievements-section reveal">
+                    <h3 class="achievements-title">Thành Tích Nổi Bật</h3>
+                    <div class="achievements-list" data-stagger-children>
+                        <div class="achievement-item reveal">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <h4>Giải Ba - Cuộc thi Sáng tạo Trẻ</h4>
+                                <p>Tỉnh Quảng Nam, 2024</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item reveal">
+                            <i class="fas fa-robot"></i>
+                            <div>
+                                <h4>Giải Nhì - Vex-League Đà Nẵng</h4>
+                                <p>Cuộc thi Robotics, 2023</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item reveal">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <h4>Top 10 - Open Stem Day</h4>
+                                <p>FPT Hà Nam, 2024</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item reveal">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <h4>Top 8 - U-Invent 7</h4>
+                                <p>Cuộc thi Sáng tạo, 2025</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item reveal">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <h4>Top 2 - RC Changlle</h4>
+                                <p> FPT Đà Nẵng, 2024</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item reveal">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <h4>Top 30 - Miss & Misster</h4>
+                                <p>FPT Đà Nẵng 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="container">
+                <div class="section-title text-center reveal">
+                    <span>Portfolio</span>
+                    <h2>Các Dự Án Tiêu Biểu</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 mb-4 reveal">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./Ảnh màn hình 2025-07-09 lúc 12.29.01.png" alt="OmiFood Website">
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JS</span>
+                                </div>
+                                <h3>OmiFood</h3>
+                                <p>Website quảng bá dịch vụ ẩm thực hiện đại và rất có ích cho nhà hàng nếu muốn xây
+                                    dựng thương hiệu, mở rộng khách hàng và chuyển đổi số trong ngành ăn uống
+                                    thiện.</p>
+                                <div class="project-links">
+                                    <a href="https://tqbinhhh.github.io/Omi-Food/" target="_blank" class="project-link" title="Xem Live"><i
+                                            class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4 reveal">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./Ảnh màn hình 2025-07-01 lúc 14.17.22.png" alt="Hệ thống Hosting">
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JS</span>
+                                </div>
+                                <h3>Hệ thống cho thuê Hosting</h3>
+                                <p>MT Hosting là một mẫu website lý tưởng cho các công ty cung cấp dịch vụ hosting, giúp
+                                    xây dựng thương hiệu chuyên nghiệp, nâng cao trải nghiệm khách hàng và thúc đẩy
+                                    chuyển đổi số thông qua các gói dịch vụ linh hoạt, công nghệ hiện đại và hệ thống
+                                    quản trị dễ sử dụng.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/tqbinhhh/Web-Hosting" target="_blank" class="project-link" title="Xem trên GitHub"><i
+                                            class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience" id="experience">
+            <div class="container">
+                <div class="section-title text-center reveal">
+                    <span>Hành trình</span>
+                    <h2>Kinh Nghiệm Làm Việc</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-progress"></div>
+                    <div class="timeline-item" data-direction="right">
+                        <div class="timeline-content reveal">
+                            <span class="timeline-date">09/2022 - 01/2025</span>
+                            <h3>Bắt đầu học lập trình</h3>
+                            <p class="timeline-company">Funix Việt Nam và 28 Tech</p>
+                            <ul class="timeline-tasks">
+                                <li>Thiết kế và phát triển website .</li>
+                                <li>Thiết kế và tối ưu hóa cơ sở dữ liệu.</li>
+                                <li>Bắt đầu sử dụng các ngôn ngữ lập trình.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-direction="left">
+                        <div class="timeline-content reveal">
+                            <span class="timeline-date">02/2025 - Hiện tại</span>
+                            <h3>Frontend Developer </h3>
+                            <p class="timeline-company">CodeGym Việt Nam </p>
+                            <ul class="timeline-tasks">
+                                <li>Xây dựng giao diện người dùng đáp ứng (Responsive).</li>
+                                <li>Chuyển đổi các bản thiết kế Figma thành code HTML/CSS/JS chính xác.</li>
+                                <li>Làm việc với Git để quản lý phiên bản và hợp tác trong nhóm.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-title text-center reveal">
+                    <span>Kết nối</span>
+                    <h2>Liên Hệ Với Tôi</h2>
+                    <p>Mình luôn sẵn sàng lắng nghe các cơ hội hợp tác hoặc chỉ đơn giản là một cuộc trò chuyện. <br>Đừng
+                        ngần ngại liên lạc nhé!</p>
+                </div>
+                <div class="contact-wrapper reveal">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Địa chỉ</h4>
+                                <p>Đà Nẵng, Việt Nam</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>tqbdinamo@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Điện thoại</h4>
+                                <p>+84 385344509</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="" class="contact-form" data-stagger-children>
+                        <div class="form-group reveal">
+                            <input type="text" name="name" placeholder="Tên của bạn" required>
+                            <input type="email" name="email" placeholder="Email của bạn" required>
+                        </div>
+                        <textarea name="message" placeholder="Lời nhắn của bạn..." rows="6" required
+                            class="reveal"></textarea>
+                        <button type="submit" class="btn btn-primary reveal">Gửi Lời Nhắn</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="chat-buttons-container">
+
+            <a href="https://www.facebook.com/tran.quoc.binh.29521/" target="_blank" class="chat-btn messenger-btn"
+                title="Chat Facebook Messenger">
+                <i class="fab fa-facebook-messenger"></i>
+            </a>
         </div>
-    </div>
-    <!-- end Header -->
 
-    <!-- Section-1 -->
-    <div class="section-1">
+    </main>
+
+    <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="inner-wrap">
-                        <h1>
-                            Goodbye junk food.
-                        </h1>
-                        <br>
-                        <h1>
-                            Hello super healthy meals.
-                        </h1>
-                        <a href="#" class="button button-one">I'm hungry</a>
-                        <a href="#" class="button button-two">Show me more</a>
-                    </div>
-                </div>
-            </div>
+            <p>&copy; 2025 Trần Quốc Bình. All Rights Reserved.</p>
         </div>
-    </div>
-    <!-- End Section-1 -->
+    </footer>
 
-    <!-- Section-two -->
-    <div class="section-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="box-head">
-                        <h2>
-                            Get food fast — not fast food
-                        </h2>
-                        <p class="inner-head">Hello, we’re Omnifood, your new premium food delivery service. We know
-                            you’re always busy. <br> No time for cooking. So let us take care of that, we’re really good
-                            at
-                            it, we promise!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <div class="inner-box">
-                        <div class="inner-icon">
-                            <i class="fa-solid fa-infinity"></i>
-                        </div>
-                        <div class="inner-content">
-                            <h3>
-                                Up to 365 days/year
-                            </h3>
-                            <p class="inner-desc">Never cook again! We really mean that. Our subscription plans include
-                                up to 365 days/year coverage. You can also choose to order more flexibly if that's your
-                                style.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="inner-box">
-                        <div class="inner-icon">
-                            <i class="fa-regular fa-clock"></i>
-                        </div>
-                        <div class="inner-content">
-                            <h3>
-                                Ready in 20 minutes
-                            </h3>
-                            <p class="inner-desc">You're only twenty minutes away from your delicious and super healthy
-                                meals delivered right to your home. We work with the best chefs in each town to ensure
-                                that you're 100% happy.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="inner-box">
-                        <div class="inner-icon">
-                            <i class="fa-solid fa-seedling"></i>
-                        </div>
-                        <div class="inner-content">
-                            <h3>
-                                100% organic
-                            </h3>
-                            <p class="inner-desc">All our vegetables are fresh, organic and local. Animals are raised
-                                without added hormones or antibiotics. Good for your health, the environment, and it
-                                also tastes better!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="inner-box">
-                        <div class="inner-icon">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                        <div class="inner-content">
-                            <h3>
-                                Order anything
-                            </h3>
-                            <p class="inner-desc">We don't limit your creativity, which means you can order whatever you
-                                feel like. You can also choose from our menu containing over 100 delicious meals. It's
-                                up to you!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End  Section-two -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="script.js"></script>
 
-    <!-- Section-3 -->
-    <div class="section-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-3">
-                    <div class="inner-box">
-                        <div class="inner-image">
-                            <img src="./assets/images/food 1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="inner-box">
-                        <div class="inner-image">
-                            <img src="./assets/images/food 2.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="inner-box">
-                        <div class="inner-image">
-                            <img src="./assets/images/food 3.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="inner-box">
-                        <div class="inner-image">
-                            <img src="./assets/images/food 4.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <div class="inner-box">
-                        <div class="inner-image">
-                            <img src="./assets/images/food 5.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="inner-box">
-                        <div class="inner-image">
-                            <img src="./assets/images/food 6.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="inner-box">
-                        <div class="inner-image">
-                            <img src="./assets/images/food 7.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="inner-box">
-                        <div class="inner-image">
-                            <img src="./assets/images/food 8.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Section-3 -->
-
-    <!-- Section-4 -->
-    <div class="section-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="box-head">
-                        <h2>How it works — Simple as 1, 2, 3</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <div class="inner-iphone">
-                        <img src="../OMiFOOD/assets/images/app-iPhone.png" alt="app iphone">
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="inner-box">
-                        <div class="inner-step-box">
-                            <div>1</div>
-                            <p class="inner-desc">
-                                Choose the subscription plan that best fits your <br> needs and sign up
-                                today.
-                            </p>
-                        </div>
-                        <div class="inner-step-box">
-                            <div>2</div>
-                            <p class="inner-desc">
-                                Order your delicious meal using our mobile app or <br> website. Or you can even call us!
-                            </p>
-                        </div>
-                        <div class="inner-step-box">
-                            <div>3</div>
-                            <p class="inner-desc">
-                                Enjoy your meal after less than 20 minutes. See you the next time!
-                            </p>
-                        </div>
-                        <div class="inner-download">
-                            <a target="_blank" href="http://apple.com/vn/app-store/"><img class="appstore"
-                                    src="../OMiFOOD/assets/images/download-app-iphone.png" alt="Download appstore"></a>
-                            <a target="_blank" href="https://play.google.com/store/games?hl=vi&pli=1"> <img
-                                    src="../OMiFOOD/assets/images/download-app-android.png" alt="Download appstore"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Section-4 -->
-
-            <!-- Section-5 -->
-            <div class="section-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="box-head">
-                                <h2>We're currently in these cities</h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-3">
-                                <div class="inner-box">
-                                    <img src="../OMiFOOD/assets/images/lisbon-3.jpg" alt="Lisbon">
-                                    <h3>Lisbon</h3>
-                                    <div class="inner-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                        <p class="inner-desc"> 1600+ happy eaters</p>
-                                    </div>
-                                    <div class="inner-icon">
-                                        <i class="fa-solid fa-star"></i>
-                                        <p class="inner-desc"> 60+ top chefs</p>
-                                    </div>
-                                    <div class="inner-icon">
-                                        <i class="fa-solid fa-envelope"></i>
-                                        <a href="#">@omnifood_lx</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="inner-box">
-                                    <img src="../OMiFOOD/assets/images/san-francisco.jpg" alt="San-Francisco">
-                                    <h3>San-Fracisco</h3>
-                                    <div class="inner-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                        <p class="inner-desc"> 3700+ happy eaters</p>
-                                    </div>
-                                    <div class="inner-icon">
-                                        <i class="fa-solid fa-star"></i>
-                                        <p class="inner-desc"> 160+ top chefs</p>
-                                    </div>
-                                    <div class="inner-icon">
-                                        <i class="fa-solid fa-envelope"></i>
-                                        <a href="#">@omnifood_sf</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="inner-box">
-                                    <img src="../OMiFOOD/assets/images/berlin.jpg" alt="Berlin">
-                                    <h3>Berlin</h3>
-                                    <div class="inner-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                        <p class="inner-desc"> 2300+ happy eaters</p>
-                                    </div>
-                                    <div class="inner-icon">
-                                        <i class="fa-solid fa-star"></i>
-                                        <p class="inner-desc"> 110+ top chefs</p>
-                                    </div>
-                                    <div class="inner-icon">
-                                        <i class="fa-solid fa-envelope"></i>
-                                        <a href="#"> @omnifood_berlin</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="inner-box">
-                                    <img src="../OMiFOOD/assets/images/london.jpg" alt="London">
-                                    <h3>London</h3>
-                                    <div class="inner-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                        <p class="inner-desc"> 1200+ happy eaters</p>
-                                    </div>
-                                    <div class="inner-icon">
-                                        <i class="fa-solid fa-star"></i>
-                                        <p class="inner-desc"> 50+ top chefs</p>
-                                    </div>
-                                    <div class="inner-icon">
-                                        <i class="fa-solid fa-envelope"></i>
-                                        <a href="#">@omnifood_london</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Section-5 -->
-
-            <!-- Section-test -->
-            <div class="section-test">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="box-head">
-                                <h2>Our customers can't live without us</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="inner-box">
-                                <blockquote>
-                                    Omnifood is just awesome! I just launched a startup which leaves me with no time for
-                                    cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live
-                                    without my daily meals!
-                                </blockquote>
-                                <div class="user">
-                                    <img src="../OMiFOOD/assets/images/customer-1.jpg" alt="Alberto Duncan">
-                                    <p>Alberto Duncan</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="inner-box">
-                                <blockquote>
-                                    Inexpensive, healthy and great-tasting meals, delivered right to my home. We have
-                                    lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and
-                                    my family are so in love!
-                                </blockquote>
-                                <div class="user">
-                                    <img src="../OMiFOOD/assets/images/customer-2.jpg" alt="Joana Silva">
-                                    <p>Joana Silva</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="inner-box">
-                                <blockquote>
-                                    I was looking for a quick and easy food delivery service in San Franciso. I tried a
-                                    lot of them and ended up with Omnifood. Best food delivery service in the Bay Area.
-                                    Keep up the great work!
-                                </blockquote>
-                                <div class="user">
-                                    <img src="../OMiFOOD/assets/images/customer-3.jpg" alt="Milton Chapman">
-                                    <p>Milton Chapman</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Section-test -->
-
-            <!-- Section-Price -->
-            <div class="section-pricing">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="box-head">
-                                <h2>Start eating healthy today</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="pricing-box">
-                                <div class="inner-head">
-                                    <h3>Premium</h3>
-                                    <p class="price">
-                                        $399 <span>/ month</span>
-                                    </p>
-                                    <p class="price-meal">
-                                        That's only 13.30$ per meal
-                                    </p>
-                                </div>
-                                <div class="inner-list">
-                                    <ul>
-                                        <li><i class="fa-solid fa-check"></i>1 meal every day</li>
-                                        <li><i class="fa-solid fa-check"></i>Order 24/7</li>
-                                        <li><i class="fa-solid fa-check"></i>Access to newest creations</li>
-                                        <li><i class="fa-solid fa-check"></i>Free delivery</li>
-                                    </ul>
-                                </div>
-                                <div class="inner-button">
-                                    <a href="#">Sign up now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="pricing-box">
-                                <div class="inner-head">
-                                    <h3>Pro</h3>
-                                    <p class="price">
-                                        $149 <span>/ month</span>
-                                    </p>
-                                    <p class="price-meal">
-                                        That's only 14.90$ per meal
-                                    </p>
-                                </div>
-                                <div class="inner-list">
-                                    <ul>
-                                        <li><i class="fa-solid fa-check"></i>1 meal 10 days/month</li>
-                                        <li><i class="fa-solid fa-check"></i>Order 24/7</li>
-                                        <li><i class="fa-solid fa-check"></i>Access to newest creations</li>
-                                        <li><i class="fa-solid fa-check"></i>Free delivery</li>
-                                    </ul>
-                                </div>
-                                <div class="inner-button">
-                                    <a href="#">Sign up now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="pricing-box">
-                                <div class="inner-head">
-                                    <h3>Starter</h3>
-                                    <p class="price">
-                                        $19 <span>/ meal</span>
-                                    </p>
-                                    <p class="price-meal">
-                                        &nbsp; </p>
-                                </div>
-                                <div class="inner-list">
-                                    <ul>
-                                        <li><i class="fa-solid fa-check"></i>1 meal</li>
-                                        <li><i class="fa-solid fa-check"></i>Order from 8 am to 12 pm</li>
-                                        <li><i class="fa-solid fa-times"></i>Access to newest creations</li>
-                                        <li><i class="fa-solid fa-check"></i>Free delivery</li>
-                                    </ul>
-                                </div>
-                                <div class="inner-button">
-                                    <a href="#">Sign up now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end Section-Price -->
-            <footer class="footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h3>Copyright © 2025 by QuocBinh. All rights reserved.</h3>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
