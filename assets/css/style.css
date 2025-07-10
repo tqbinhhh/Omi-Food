@@ -503,183 +503,136 @@
 }
 
 /* End Footer */
-/* ========================================= */
-/* MEDIA QUERIES                */
-/* ========================================= */
 
-/* For Smaller Desktops & Large Tablets (Max-width: 1200px) */
-@media (max-width: 1200px) {
-    .header .inner-menu ul li {
-        margin-left: 40px; /* Reduce menu spacing */
-    }
+/*
+======================================================================
+  CODE RESPONSIVE HOÀN CHỈNH (LAPTOP, TABLET & MOBILE)
+======================================================================
+*/
 
-    .section-4 .inner-iphone {
-        left: 100px; /* Adjust iPhone position */
-    }
-}
-
-
-/* For Tablets (Portrait) (Max-width: 991px) */
-@media (max-width: 991px) {
-    .header .inner-main {
-        padding: 15px;
-        border-radius: 0;
-    }
-    .header {
-        top: 0; /* Header sticks to the top */
-        opacity: 1;
-    }
-
-    .header .inner-menu ul {
-        /* On tablets, a hamburger menu would be ideal. For now, we'll hide the text menu. */
-        display: none;
-    }
-
-    .section-1 h1 {
-        font-size: 2.5rem; /* Reduce heading font size */
-    }
-    
-    .section-2 .box-head h2,
-    .section-4 .box-head h2,
-    .section-5 .box-head h2,
-    .section-test .box-head h2,
-    .section-pricing .box-head h2 {
-        font-size: 1.8rem; /* Reduce section title font size */
-    }
-
-    .section-2 .inner-head {
-        font-size: 1.1rem; /* Reduce subtitle font size */
-    }
-
-    /* Adjust the "How it works" section for tablets */
-    .section-4 .inner-iphone {
-        position: relative;
-        left: 0;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .section-4 .inner-iphone img {
-        width: 200px;
-        height: auto;
-    }
-    
-    .section-4 .col-6 {
-        flex: 0 0 100%; /* Make columns full width */
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .section-4 .inner-box .inner-step-box {
-        text-align: left;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .section-4 .inner-box .inner-download {
-        justify-content: center;
-    }
-}
-
-
-/* For Mobile Phones (Max-width: 767px) */
-@media (max-width: 767px) {
-    body {
-        font-size: 16px;
-    }
-
-    .header .inner-logo img {
-        height: 60px; /* Smaller logo */
-    }
-
-    .section-1 h1 {
-        font-size: 1.8rem; /* Further reduce heading font size */
-        line-height: 1.4;
-    }
-    
-    .section-1 .inner-wrap {
-        text-align: center;
-    }
-
-    /* Stack buttons on mobile */
-    .section-1 .button {
-        display: block;
-        margin: 15px auto;
-    }
-
-    .section-1 .button-one,
-    .section-1 .button-two {
-        margin-right: 0;
-    }
-
-    .section-2,
-    .section-3,
-    .section-4,
-    .section-5 {
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-
-    .section-2 .box-head {
-        margin-bottom: 30px;
-    }
-    
-    .section-2 .inner-box {
-        text-align: center; /* Center content in feature boxes */
-    }
-
-    .section-2 .inner-content h3 {
-        font-size: 1.4rem;
-    }
-
-    /* Full-width sections for testimonials and pricing */
-    .section-test, .section-pricing {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    
-    .section-4 .box-head {
+/* ----------------------------------------------------------------------
+ GIAO DIỆN LAPTOP (KÍCH THƯỚC NHỎ)
+ Áp dụng cho màn hình từ 1195px đến 1400px
+----------------------------------------------------------------------
+*/
+@media (min-width: 1195px) and (max-width: 1400px) {
+    /* Section 2 & 5 (có 4 cột) -> chuyển thành 3 cột để thoáng hơn */
+    .section-2 .col-3,
+    .section-5 .col-3 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
         margin-bottom: 40px;
     }
 
-    .section-4 .inner-box .inner-step-box div {
-        height: 45px;
-        width: 45px;
-        font-size: 120%;
+    /* Xóa lề dưới của mục cuối cùng */
+    .section-2 .row .col-3:last-child,
+    .section-5 .row .col-3:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/* ----------------------------------------------------------------------
+ GIAO DIỆN TABLET
+ Áp dụng cho màn hình từ 768px đến 1194px
+----------------------------------------------------------------------
+*/
+@media (min-width: 768px) and (max-width: 1194px) {
+    /* Section 2 & 5 -> chuyển thành 2 cột */
+    .section-2 .col-3,
+    .section-5 .col-3 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 40px;
+    }
+
+    /* Xóa lề dưới của 2 mục cuối trong lưới 2 cột */
+    .section-2 .row .col-3:nth-last-child(-n+2),
+    .section-5 .row .col-3:nth-last-child(-n+2) {
+        margin-bottom: 0;
+    }
+
+    /* Section 4, Testimonials, Pricing -> chuyển thành 1 cột */
+    .section-4 .col-6,
+    .section-test .col-4,
+    .section-pricing .col-4 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
     }
     
-    .section-4 .inner-box .inner-download {
-        flex-direction: column; /* Stack download buttons */
+    /* === SỬA LỖI CHO SECTION 4 TRÊN TABLET === */
+    .section-4 .inner-iphone {
+        position: relative; /* Reset lại position */
+        left: auto;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+
+/* ----------------------------------------------------------------------
+ GIAO DIỆN MOBILE
+ Áp dụng cho màn hình từ 767px trở xuống
+----------------------------------------------------------------------
+*/
+@media (max-width: 767px) {
+    /* Tất cả các section có cột sẽ chuyển thành 1 cột dọc */
+    .section-2 .col-3,
+    .section-4 .col-6,
+    .section-5 .col-3,
+    .section-test .col-4,
+    .section-pricing .col-4 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    /* === SỬA LỖI CHO SECTION 4 TRÊN MOBILE === */
+    .section-4 .inner-iphone {
+        position: relative; /* Reset lại position */
+        left: auto;
+        margin-bottom: 50px;
+    }
+
+    /* Xóa lề dưới của mục cuối cùng trong mỗi section */
+    .section-2 .row > div:last-child,
+    .section-4 .row > div:last-child,
+    .section-5 .row > div:last-child,
+    .section-test .row > div:last-child,
+    .section-pricing .row > div:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Tinh chỉnh cho Section 4 trên Mobile */
+    .section-4 .inner-step-box,
+    .section-4 .inner-download {
+        flex-direction: column;
         align-items: center;
     }
-
-    .section-4 .inner-box .inner-download img {
-        width: 200px;
-        padding-left: 0;
-        margin-bottom: 20px;
+    .section-4 .inner-step-box div {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .section-4 .inner-download img {
+        margin-right: 0;
+        margin-bottom: 15px;
     }
 
-    .section-4 .inner-box .inner-download .appstore {
-         width: 240px;
-    }
-
-    .section-test blockquote {
-        font-size: 1rem;
+    /* Tinh chỉnh cho Section Testimonials trên Mobile */
+    .section-test .inner-box,
+    .section-4 .inner-box {
         text-align: center;
     }
-    
     .section-test blockquote::before {
-        font-size: 400%;
         left: 50%;
         transform: translateX(-50%);
     }
-
     .section-test .user {
         justify-content: center;
-    }
-    
-    .footer h3 {
-        font-size: 1rem;
     }
 }
