@@ -1,637 +1,564 @@
-/* Header */
+/*
+======================================================================
+  CÀI ĐẶT CHUNG & BIẾN
+======================================================================
+*/
+:root {
+    --primary-color: #e67e22;
+    --primary-color-darker: #c0392b;
+    --text-color: #555;
+    --heading-color: #333;
+    --light-gray-bg: #f8f9fa;
+    --white-color: #fff;
+}
+
+/*
+======================================================================
+  THIẾT LẬP CƠ BẢN
+======================================================================
+*/
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--heading-color);
+}
+
+.section-padding {
+    padding: 90px 0;
+}
+
+.box-head {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.box-head h2 {
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.box-head h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 25px auto 0;
+}
+
+.box-head .inner-head {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/*
+======================================================================
+  HEADER
+======================================================================
+*/
 .header {
-    position: fixed;
-    top: 40px;
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 1030;
+    padding: 20px 0;
+    transition: all 0.4s ease;
+}
+
+.header.sticky {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
 .header .inner-main {
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
-    border-radius: 45px;
-    background: #fff;
-    opacity: 0.8;
-    filter: alpha(opacity=50);
-}
-
-.header .inner-logo {
-    margin-right: 20px;
 }
 
 .header .inner-logo img {
-    height: 73px;
+    height: 55px;
     width: auto;
+    transition: all 0.4s ease;
 }
 
-.header .inner-menu ul {
+.header.sticky .inner-logo img {
+    content: url(../images/logo.png);
+}
+
+.header .inner-menu {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
-.header .inner-menu ul li {
-    margin-left: 80px;
+.header .inner-menu li {
+    margin-left: 45px;
 }
 
-.header .inner-menu ul li a {
-    color: var(--color-);
-    font-size: 14px;
-    font-weight: 500;
+.header .inner-menu li a {
+    color: var(--white-color);
+    font-weight: 400;
     text-decoration: none;
-    font-size: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
 }
 
-.header .inner-menu ul li a:hover {
-    color: orange;
+.header.sticky .inner-menu li a {
+    color: var(--text-color);
 }
 
-/* End Header */
+.header .inner-menu li a:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
 
-/* Section-1 */
+.header-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    color: var(--white-color);
+}
+
+.header.sticky .header-toggle {
+    color: var(--heading-color);
+}
+
+/*
+======================================================================
+  CÁC SECTION
+======================================================================
+*/
 .section-1 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/Background.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-attachment: fixed;
+    text-align: center;
 }
 
-.section-1 h1 {
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 300;
+.section-1 .inner-wrap h1 {
+    color: var(--white-color);
+    font-size: 3rem;
+    letter-spacing: 1px;
 }
 
-.section-1 a {
+.section-1 .button {
     text-decoration: none;
-    color: black;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    display: inline-block;
+    border: 2px solid var(--primary-color);
+    margin: 10px;
+    transition: all 0.3s ease;
 }
 
 .section-1 .button-one {
-    margin-top: 20px;
-    margin-right: 20px;
-    background: orange;
-    border: 1px solid #e67e27;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 200;
+    background: var(--primary-color);
+    color: var(--white-color);
 }
 
 .section-1 .button-one:hover {
-    background: rgb(255, 149, 0);
+    background: var(--primary-color-darker);
+    border-color: var(--primary-color-darker);
+    transform: translateY(-3px);
 }
 
 .section-1 .button-two {
-    background-color: rgba(230, 126, 39, 0.1);
-    border: 1px solid #e67e27;
-    color: orange;
-    font-size: 20px;
-    font-weight: 200;
+    background: transparent;
+    color: var(--primary-color);
 }
 
 .section-1 .button-two:hover {
-    background: orange;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--white-color);
+    transform: translateY(-3px);
 }
 
-/* End Section-1 */
-
-/* Section-2 */
 .section-2 {
-    margin-top: 100px;
-    margin-bottom: 80px;
+    background-color: var(--light-gray-bg);
 }
 
-.section-2 .box-head {
-    margin-bottom: 65px;
-}
-
-.section-2 .box-head h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    font-weight: 300;
-}
-
-.section-2 .inner-head {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-top: 25px;
-    font-size: 20px;
-    font-weight: 200;
-}
-
-.section-2 .inner-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
+.section-2 .inner-box {
+    text-align: center;
+    padding: 15px;
 }
 
 .section-2 .inner-icon i {
-    font-size: 40px;
-    color: #e67e27;
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+}
+
+.section-2 .inner-box:hover .inner-icon i {
+    transform: rotate(15deg) scale(1.1);
 }
 
 .section-2 .inner-content h3 {
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    text-transform: uppercase;
-    font-size: 25px;
-    font-weight: 300;
-}
-
-.section-2 .inner-desc {
-    padding-top: 20px;
-    font-size: 18px;
-    font-weight: 300;
-}
-
-/* End Section-2 */
-
-/* Section-3 */
-
-.section-3 {
-    margin-bottom: 100px;
-    padding: 0;
-}
-
-.section-3 .row {
-    margin: 0 !important;
-}
-
-.section-3 .col-3 {
-    padding: 0 !important;
-}
-
-.section-3 .container {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
 .section-3 .inner-image {
     width: 100%;
-    height: 100%;
-    aspect-ratio: 1/1;
-    /* Đảm bảo hình vuông, bạn có thể chỉnh tùy ý */
     overflow: hidden;
+    position: relative;
+    background-color: var(--primary-color);
 }
 
 .section-3 .inner-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     opacity: 0.7;
-    transition: all 0.5s ease;
-    display: block;
-    /* loại bỏ khoảng trắng dưới ảnh */
-}
-
-.section-3 .inner-image img:hover {
-    opacity: 1;
     transform: scale(1.15);
-    transition: transform 0.5s;
+    transition: all 0.5s ease;
 }
 
-/* End Section-3 */
-
-/* Section-4 */
-.section-4 {
-    margin-bottom: 100px;
-}
-
-.section-4 .box-head {
-    margin-bottom: 100px;
-}
-
-.section-4 .box-head h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    font-weight: 200;
-    text-transform: uppercase;
-}
-
-.section-4 .inner-iphone {
-    position: absolute;
-    left: 225px;
+.section-3 .inner-image:hover img {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .section-4 .inner-iphone img {
-    width: 250px;
-    height: 500px;
+    max-width: 100%;
+    height: 400px;
 }
 
-.section-4 .inner-box .inner-step-box {
-    padding-top: 50px;
+.section-4 .inner-step-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
 }
 
-.section-4 .inner-box .inner-step-box div {
-    color: #e67e22;
-    border: 2px solid #e67e22;
-    display: inline-block;
+.section-4 .inner-step-box div {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
     border-radius: 50%;
     height: 55px;
     width: 55px;
+    line-height: 51px;
     text-align: center;
-    padding: 5px;
-    float: left;
-    font-size: 150%;
+    font-size: 1.5rem;
     margin-right: 25px;
+    flex-shrink: 0;
 }
 
-.section-4 .inner-box .inner-desc {
-    text-transform: uppercase;
-    font-weight: 300;
+.section-4 .inner-download img {
+    height: 50px;
+    width: auto;
+    margin-right: 15px;
+    transition: transform 0.2s ease;
 }
 
-.section-4 .inner-box .inner-download {
-    margin-top: 75px;
-    display: flex;
+.section-4 .inner-download img:hover {
+    transform: scale(1.05);
 }
 
-.section-4 .inner-box .inner-download img {
-    display: flex;
-    width: 250px;
-    padding-left: 20px;
-    margin-bottom: 50px;
-}
-
-.section-4 .inner-box .inner-download .appstore {
-    width: 295px;
-}
-
-/* End Section-4 */
-
-/* Section-5 */
 .section-5 {
-    margin-top: 50px;
-    margin-bottom: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    /* Căn đều các phần tử */
-}
-
-.section-5 .col-12 {
-    height: 100px;
-}
-
-.section-5 .box-head h2 {
-    font-weight: 200;
-}
-
-.section-5 .col-3 {
-    padding-left: 25px;
-    /* Điều chỉnh để khoảng cách đồng đều */
-    padding-right: 25px;
+    background-color: var(--light-gray-bg);
 }
 
 .section-5 .inner-box {
-    object-fit: cover;
+    background: var(--white-color);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.section-5 .inner-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .section-5 .inner-box img {
     width: 100%;
-    /* Đảm bảo hình ảnh lấp đầy khung */
-    height: auto;
-    border: solid 2px orange;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .section-5 .inner-box h3 {
+    font-size: 1.5rem;
+    padding: 15px 20px 10px 20px;
+    margin: 0;
+}
+
+.section-5 .inner-icon {
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-weight: 200;
+    padding: 5px 20px;
+    word-break: break-all;
 }
 
-.section-5 .inner-box .inner-icon {
-    display: flex;
-    flex-wrap: wrap;
+.section-5 .inner-icon:last-child {
+    padding-bottom: 20px;
 }
 
-.section-5 .inner-box .inner-desc {
-    display: inline;
-    padding-left: 20px;
+.section-5 .inner-icon i {
+    color: var(--primary-color);
+    margin-right: 10px;
 }
 
-.section-5 .inner-box a {
-    padding-left: 20px;
-    color: #e67e22;
+.section-5 .inner-icon a {
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
-.section-5 .inner-box a:hover {
-    color: #e85216;
+.section-5 .inner-icon a:hover {
+    text-decoration: underline;
 }
 
-/* End Section-5 */
-
-/* Section-test */
 .section-test {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/back-customers-min.jpg);
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-    color: #fff;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    color: var(--white-color);
 }
 
 .section-test .box-head h2 {
-    font-weight: 300;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px;
-    /* Khoảng cách từ tiêu đề đến gạch ngang */
+    color: var(--white-color);
 }
 
+.section-test .inner-box {
+    padding: 20px;
+}
 
 .section-test blockquote {
-    padding: 2px;
     font-style: italic;
-    line-height: 145%;
+    line-height: 1.5;
     position: relative;
-    margin-top: 40px;
+    padding-left: 20px;
 }
 
 .section-test blockquote::before {
     content: "\201C";
-    /* Ký tự dấu nháy kép trái */
-    font-size: 500%;
-    display: block;
+    font-size: 4rem;
     position: absolute;
-    top: -5px;
+    top: -20px;
     left: -10px;
+    color: var(--primary-color);
 }
 
 .section-test .user {
     display: flex;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .section-test .user img {
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 15px;
+    border: 2px solid var(--primary-color);
 }
 
-.section-test .user p {
-    margin: 0;
-    font-size: 90%;
-}
-
-/* End Section-Test */
-
-/* Section-Pricing */
 .section-pricing {
-    padding: 80px 0;
-    background-color: #f4f4f4;
-    /* Nền xám nhạt cho cả section */
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    background-color: var(--light-gray-bg);
 }
 
 .pricing-box {
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    padding: 30px;
     text-align: center;
-    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.pricing-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .pricing-box .inner-head h3 {
-    font-weight: 300;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .pricing-box .price {
-    font-size: 300%;
+    font-size: 3.5rem;
     font-weight: 100;
-    color: #e67e22;
-    margin-bottom: 10px;
+    color: var(--primary-color);
 }
 
 .pricing-box .price span {
-    font-size: 30%;
+    font-size: 1rem;
     font-weight: 300;
 }
 
 .pricing-box .price-meal {
-    font-size: 80%;
-    margin-bottom: 20px;
-}
-
-.pricing-box .inner-list {
-    text-align: left;
-    margin: 20px 0;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
 }
 
 .pricing-box .inner-list ul {
     list-style: none;
-    padding-left: 0;
-    margin: 0;
+    padding: 0;
+    margin: 0 0 25px 0;
+    text-align: left;
 }
 
-.pricing-box .inner-list ul li {
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
+.pricing-box .inner-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.pricing-box .inner-list ul li:last-child {
-    border-bottom: none;
-}
-
-.pricing-box .inner-list ul li i {
-    color: #e67e22;
+.pricing-box .inner-list li i {
+    color: var(--primary-color);
     margin-right: 10px;
-    width: 15px;
-    /* Giúp các dòng chữ thẳng hàng */
 }
-
-.pricing-box .inner-button {
-    /* margin-top: 20px; */
-    background: #e67e22;
-    padding: 10px 10px 10px 10px;
+.pricing-box .inner-button{
+    background: #dd6b15;
     border-radius: 5px;
+    width: 300px;
+    height: 30px;
 }
-
-.pricing-box .inner-button a {
+.pricing-box .inner-button:hover{
+    background: #c0392b;
+}
+.pricing-box .inner-button a{
     text-decoration: none;
     color: #fff;
 }
-
-.pricing-box .inner-button:hover {
-    background: #e85216;
+.pricing-box .inner-button .btn {
+    text-decoration: none;
+    font-weight: 400;
+    padding: 10px 30px;
+    border-radius: 50px;
 }
 
-/* End Section-Price */
-
-/* Footer */
 .footer {
+    background: #343a40;
+    color: #a9a9a9;
+    padding: 40px 0;
     text-align: center;
-    justify-content: center;
-    height: 10px;
 }
 
 .footer h3 {
-    padding-top: 40px;
-    color: #e67e27;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 300;
+    text-transform: none;
+    color: #a9a9a9;
+    margin: 0;
 }
-
-/* End Footer */
 
 /*
 ======================================================================
-  CODE RESPONSIVE HOÀN CHỈNH (LAPTOP, TABLET & MOBILE)
+  RESPONSIVE
 ======================================================================
 */
-
-/* ----------------------------------------------------------------------
- GIAO DIỆN LAPTOP (KÍCH THƯỚC NHỎ)
- Áp dụng cho màn hình từ 1195px đến 1400px
-----------------------------------------------------------------------
-*/
-@media (min-width: 1195px) and (max-width: 1400px) {
-    /* Section 2 & 5 (có 4 cột) -> chuyển thành 3 cột để thoáng hơn */
-    .section-2 .col-3,
-    .section-5 .col-3 {
-        -ms-flex: 0 0 33.333333%;
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-        margin-bottom: 40px;
-    }
-
-    /* Xóa lề dưới của mục cuối cùng */
-    .section-2 .row .col-3:last-child,
-    .section-5 .row .col-3:last-child {
-        margin-bottom: 0;
+@media (max-width: 1199px) {
+    .header .inner-menu li {
+        margin-left: 30px;
     }
 }
 
-
-/* ----------------------------------------------------------------------
- GIAO DIỆN TABLET
- Áp dụng cho màn hình từ 768px đến 1194px
-----------------------------------------------------------------------
-*/
-@media (min-width: 768px) and (max-width: 1194px) {
-    /* Section 2 & 5 -> chuyển thành 2 cột */
-    .section-2 .col-3,
-    .section-5 .col-3 {
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-        max-width: 50%;
-        margin-bottom: 40px;
+@media (max-width: 991px) {
+    .header .inner-menu {
+        display: none;
     }
 
-    /* Xóa lề dưới của 2 mục cuối trong lưới 2 cột */
-    .section-2 .row .col-3:nth-last-child(-n+2),
-    .section-5 .row .col-3:nth-last-child(-n+2) {
-        margin-bottom: 0;
+    .header .header-toggle {
+        display: block;
     }
 
-    /* Section 4, Testimonials, Pricing -> chuyển thành 1 cột */
-    .section-4 .col-6,
-    .section-test .col-4,
-    .section-pricing .col-4 {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-bottom: 40px;
-    }
-    
-    /* === SỬA LỖI CHO SECTION 4 TRÊN TABLET === */
-    .section-4 .inner-iphone {
-        position: relative; /* Reset lại position */
-        left: auto;
+    .section-4 .col-lg-6 {
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
+    }
+
+    .section-4 .inner-step-box {
+        justify-content: center;
+    }
+
+    .section-4 .row>div:last-child {
+        margin-bottom: 0;
     }
 }
 
-
-/* ----------------------------------------------------------------------
- GIAO DIỆN MOBILE
- Áp dụng cho màn hình từ 767px trở xuống
-----------------------------------------------------------------------
-*/
 @media (max-width: 767px) {
-    /* Tất cả các section có cột sẽ chuyển thành 1 cột dọc */
-    .section-2 .col-3,
-    .section-4 .col-6,
-    .section-5 .col-3,
-    .section-test .col-4,
-    .section-pricing .col-4 {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-bottom: 40px;
-    }
-    
-    /* === SỬA LỖI CHO SECTION 4 TRÊN MOBILE === */
-    .section-4 .inner-iphone {
-        position: relative; /* Reset lại position */
-        left: auto;
-        margin-bottom: 50px;
+    .section-padding {
+        padding: 60px 0;
     }
 
-    /* Xóa lề dưới của mục cuối cùng trong mỗi section */
-    .section-2 .row > div:last-child,
-    .section-4 .row > div:last-child,
-    .section-5 .row > div:last-child,
-    .section-test .row > div:last-child,
-    .section-pricing .row > div:last-child {
-        margin-bottom: 0;
+    .box-head h2 {
+        font-size: 1.8rem;
     }
 
-    /* Tinh chỉnh cho Section 4 trên Mobile */
-    .section-4 .inner-step-box,
-    .section-4 .inner-download {
+    .section-1 .inner-wrap h1 {
+        font-size: 2rem;
+    }
+
+    .section-1 .button {
+        display: block;
+        margin: 15px auto;
+        width: 220px;
+    }
+
+    .section-4 .inner-step-box {
         flex-direction: column;
-        align-items: center;
     }
+
     .section-4 .inner-step-box div {
         margin-right: 0;
         margin-bottom: 15px;
     }
-    .section-4 .inner-download img {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
 
-    /* Tinh chỉnh cho Section Testimonials trên Mobile */
-    .section-test .inner-box,
-    .section-4 .inner-box {
+    .section-4 .inner-download {
         text-align: center;
     }
+
+    .section-4 .inner-download img {
+        margin: 0 auto 15px auto;
+        display: block;
+    }
+
+    .section-test .inner-box {
+        text-align: center;
+    }
+
     .section-test blockquote::before {
         left: 50%;
         transform: translateX(-50%);
     }
+
     .section-test .user {
         justify-content: center;
     }
